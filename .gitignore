@@ -6,3 +6,5 @@ dist/
 prj_*
 .pytest_cache
 .fp_converter*
+.eggs
+.github
