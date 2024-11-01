@@ -45,6 +45,7 @@ def convert(bdt : Union[xgb.core.Booster, xgb.XGBClassifier, xgb.XGBRegressor]):
                     }
 
     trees = bst.trees_to_dataframe()
+    trees.Gain.loc[trees['Feature']!='Leaf'] = -999
     for i in range(ensembleDict['n_trees']):
         treesl = []
         for j in range(fn_classes):
